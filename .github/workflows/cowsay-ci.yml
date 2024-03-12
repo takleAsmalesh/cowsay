@@ -19,7 +19,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: false
-          tags: takleasmalesh/cowsay:latest
+          tags: takleasmalesh/cowsay:tagname
 
   test:
     runs-on: ubuntu-latest
@@ -30,7 +30,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Start Container
-        run: docker run -d -p 8080:8080 takleasmalesh/cowsay:latest
+        run: docker run -d -p 8080:8080 takleasmalesh/cowsay:tagname
 
       - name: Test Container
         run: curl -v http://localhost:8080
