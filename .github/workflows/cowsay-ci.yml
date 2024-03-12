@@ -33,7 +33,7 @@ jobs:
         run: docker build .
         
       - name: Start Container
-        run: docker run -d -p 8080:8080  cowsay cowsay:latest
+        run: docker run -d -p 8080:8080 cowsay:latest
 
       - name: Test Container
         run: curl -v http://localhost:8080
