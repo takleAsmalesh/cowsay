@@ -28,7 +28,10 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-
+        
+      - name: Build image
+        run: docker build .
+        
       - name: Start Container
         run: docker run -d -p 8080:8080  cowsay cowsay:latest
 
