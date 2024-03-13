@@ -50,7 +50,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Log in to Docker Hub
-        run: echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+        run: echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login --username takleAsmalesh ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin -t O
       
       - name: Build Docker image
         run: docker build -t takleAsmalesh/cowsay:latest .
