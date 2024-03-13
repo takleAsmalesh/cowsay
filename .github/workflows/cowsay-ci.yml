@@ -55,7 +55,7 @@ jobs:
       - name: Build Docker image
         run: docker build -t takleAsmalesh/cowsay:latest .
 
-     -  name: Push Docker image to Docker Hub
+      - name: Push Docker image to Docker Hub
         run: docker push takleAsmalesh/cowsay:latest
 
     #   - name: Checkout Repository
