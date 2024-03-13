@@ -1,4 +1,4 @@
-name: Docker Build and Push @@@@@@@@
+name: Docker Build and Push
 
 on:
   push:
@@ -33,7 +33,7 @@ jobs:
         run: docker build -t cowsay .
         
       - name: Start Container
-        run: docker run -d --rm --name=cowsay -p 5000:8080 cowsay
+        run: docker run -d --rm --name=cowsay -p 127.0.0.1:8080 cowsay
 
       - name: sleep
         run: sleep 10
